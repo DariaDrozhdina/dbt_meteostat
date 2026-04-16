@@ -12,7 +12,6 @@ add_features AS (
 		, date_part('month', timestamp) AS date_month 	-- number of the month of year
 		, date_part('year', timestamp) AS date_year 		-- number of year
 		, DATE_PART('week', timestamp)AS cw 			-- number of the week of year
-		, TO_CHAR(timestamp, 'FMmon') AS month_name 	-- name of the month
 		, TO_CHAR(timestamp, 'FMdy') AS weekday 
     FROM hourly_data
 ),
